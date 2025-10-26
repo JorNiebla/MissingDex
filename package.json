@@ -1,15 +1,24 @@
 {
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "esbuild": "^0.25.11",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12"
   },
   "name": "missingdex",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild src/main.ts --bundle --outfile=dist/main.js --platform=browser --target=es2022"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "axios-cache-interceptor": "^1.8.3",
+    "pokenode-ts": "^1.20.0"
+  }
 }
